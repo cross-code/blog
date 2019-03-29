@@ -5,7 +5,7 @@
 # Site
 title: Cross Code
 subtitle: 기술블로그
-description: 프론트앤드 개발을 좋아하는 사람들의 블로그
+description: 프론트앤드 개발을 좋아하는 사람들의 글쓰기 공간
 keywords: 프론트앤드, frontend, javascript, html5, css3
 author: cross-code
 language: ko
@@ -15,7 +15,7 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://yoursite.com
 root: /
-permalink: :title/
+permalink: posts/:title/
 permalink_defaults:
 
 # Directory
