@@ -35,10 +35,10 @@ cache:
 # ---------------------------------------------------------------
 
 favicon:
-  small: /images/favicon-16x16-next.png
-  medium: /images/favicon-32x32-next.png
-  apple_touch_icon: /images/apple-touch-icon-next.png
-  safari_pinned_tab: /images/logo.svg
+  small: /images/logo/favicon-16x16.png
+  medium: /images/logo/favicon-32x32.png
+  apple_touch_icon: /images/logo/apple-icon-180x180.png
+  #safari_pinned_tab: /images/logo.svg
   #android_manifest: /images/manifest.json
   #ms_browserconfig: /images/browserconfig.xml
 
@@ -228,7 +228,7 @@ avatar:
   # In site directory (source/uploads): /uploads/avatar.gif
   # You can also use other linking images.
   #url: #/images/avatar.gif
-  url: https://avatars3.githubusercontent.com/u/33419079?s=100&v=4
+  url: /images/logo/favicon-96x96.png
   # If true, the avatar would be dispalyed in circle.
   rounded: true
   # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.
