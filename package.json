@@ -1,6 +1,6 @@
 {
   "name": "cross-code-blog",
-  "version": "0.0.1",
+  "version": "0.8.1",
   "private": true,
   "hexo": {
     "version": "3.8.0"
@@ -18,7 +18,7 @@
     "hexo-server": "^0.3.3"
   },
   "scripts": {
-    "start": "hexo server",
+    "start": "hexo server --draft",
     "clean": "hexo clean",
     "deploy": "hexo deploy --generate"
   }
