@@ -2,8 +2,6 @@
 layout: post
 title: WebRTC
 date: 2019-04-18 23:11:31
-photos:
- - /posts/WebRTC/webrtc.jpg
 tags:
   - webrtc
   - codeJS
