@@ -13,7 +13,10 @@ WebRTC (Web Real-Time Communication)는 웹 브라우저 간에 플러그인 도
 WebRTC는 구글이 오픈소스화한 프로젝트에서 기원하였으며, 그 뒤로 국제 인터넷 표준화 기구(IETF)가 프로토콜 표준화 작업을, W3C가 API 정의를 진행하였으며, 음성 통화, 영상 통화, P2P 파일 공유 등으로 활용 될 수 있다.
 
 ## WebRTC 지원 브라우저
-Do something
+이제는 모든 모던 브라우저들이 지원을 하고있습니다.
+하지만 경험상 Edge는 개발하기도 힘들지만 타 브라우저에 비해 성능도 떨어집니다.
+ 
+![WebRTC 지원 브라우저](./webrtc-browser.jpg)
 
 ## WebRTC 주요 API
 - GetUserMedia
@@ -33,8 +36,7 @@ Do something
   P2P 연결이 안되는 환경일때 트래픽을 중계하는데 사용함
 
 - ICE (Interactive Connectivity Establishment)
-  P2P 간 다이렉트로 통신을 위한 기술
-  STUN, TURN 등의 기술을 종합 활용하여 라우팅 경로를 찾아내는 기술로 UDP hole punching (P2P간 공인IP가 아니더라도 최대한 연결 가능하도록 하는 기법)을 지원.
+  P2P 간 다이렉트로 통신을 위해 STUN, TURN 등의 기술을 종합 활용하여 라우팅 경로를 찾아내는 기술로 UDP hole punching (P2P간 공인IP가 아니더라도 최대한 연결 가능하도록 하는 기법)을 지원.
 
 ## WebRTC 통신 절차
 Do something
