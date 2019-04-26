@@ -39,12 +39,13 @@ WebRTC는 구글이 오픈소스화한 프로젝트에서 기원하였으며, �
   P2P 간 다이렉트로 통신을 위해 STUN, TURN 등의 기술을 종합 활용하여 라우팅 경로를 찾아내는 기술로 UDP hole punching (P2P간 공인IP가 아니더라도 최대한 연결 가능하도록 하는 기법)을 지원.
 
 ## WebRTC 통신 절차
-Do something
+그림을 보고 설명하자면 절차는 이렇습니다.
 
 ## WebRTC 활용안
 Do something
 
 ## 참고
+- chrome://webrtc-internal
 https://m.blog.naver.com/PostView.nhn?blogId=itperson&logNo=220952200651&proxyReferer=https%3A%2F%2Fwww.google.com%2F
 
 ## 작성자 
