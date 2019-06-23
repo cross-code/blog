@@ -80,7 +80,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(Counter)
 이것들을 정말 줄일 수는 없을까요?
 
 # use-simple-store 🏬
-[use-simple-store](https://github.com/skt-t1-byungi/use-simple-store)는 이런 리덕스 장황한 작들을 피하고, 보다 심플하게 리액트에서 글로벌 상태를 관리하기 위한 라이브러리입니다. 이번엔 use-simple-store를 사용해 카운터를 만들어 보면서 리덕스와 어떤 차이가 있는지 살펴봅시다.
+[use-simple-store](https://github.com/skt-t1-byungi/use-simple-store)는 이런 리덕스 장황한 작업들을 피하고, 보다 심플하게 리액트에서 글로벌 상태를 관리하기 위한 라이브러리입니다. 이번엔 use-simple-store를 사용해 카운터를 만들어 보면서 리덕스와 어떤 차이가 있는지 살펴봅시다.
 
 ## `use-simple-store`로 Counter 만들기
 
