@@ -41,11 +41,14 @@ WebRTC는 구글이 오픈소스화한 프로젝트에서 기원하였으며, �
 ## WebRTC 통신 절차
 그림을 보고 설명하자면 절차는 이렇습니다.
 
-## WebRTC 활용안
-Do something
+## WebRTC 활용한 서비스
+ - 화상회의
+    - https://appear.in
+    - https://jitsi.org
 
 ## 참고
-- chrome://webrtc-internal
+- 크롬 주소창에 입력하면 WebRTC 연결 상태와 로그를 볼 수 있다. chrome://webrtc-internal
+
 https://m.blog.naver.com/PostView.nhn?blogId=itperson&logNo=220952200651&proxyReferer=https%3A%2F%2Fwww.google.com%2F
 
 ## 작성자 
