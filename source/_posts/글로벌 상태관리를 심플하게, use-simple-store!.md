@@ -43,7 +43,7 @@ render(
 )
 ```
 
-리듀서로 전달될 `action`을 생성하는 함수를 작성합니다.
+리듀서로 전달될, `action`을 생성하는 함수를 작성합니다.
 
 ```js
 const increment = () => {
@@ -72,7 +72,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(Counter)
 ```
 그럼 끝? 아니, 아직 안 끝났을 수 있습니다.
 
-지금은 액션타입을 문자열 그대로 작성했지만, 상수로 분리해 관리하기도 합니다. 또 리덕스 커뮤니티는 리덕스와 리액트 컴포넌트 사이에 `Container component`라고 불리는 중간 레이어를 두는 것을 권장합니다. 위에서 connect한 Counter는 다시 `CounterContainer`와 `Counter`로 분리될 수 있을 겁니다.
+지금은 액션타입을 문자열 그대로 작성했지만 이것을 상수로 분리해 관리하기도 합니다. 또 리덕스 커뮤니티는 리덕스와 리액트 컴포넌트 사이에 `Container component`라고 불리는 중간 레이어를 두는 것을 권장합니다. 위에서 connect한 Counter는 다시 `CounterContainer`와 `Counter`로 분리될 수 있을 겁니다.
 
 
 컴포넌트가 많아질수록 이런 작업은 정말 피곤합니다. 만약 타입스크립트라도 사용한다면... 😱
@@ -154,7 +154,7 @@ const reducer = (state = INITIAL_STATE, action) => {
 반면 use-simple-store는 state를 직접 바꿀 수 있어서 보다 깔끔한 코드를 작성할 수 있습니다. (내부적으로 immutable 라이브러리인 [immer](https://github.com/immerjs/immer)을 사용합니다.)
 ```js
 const addUser = newUser => update(state => {
-    state.team.users.push(user)
+    state.team.users.push(newUser)
 })
 ```
 
@@ -189,10 +189,9 @@ selector 함수가 외부 변수에 의존한다면, 다른 리액트 훅처럼 
 심플함을 위해 포기한 것들이 있습니다. 
 
 ### Provider 부재
-use-simple-store는 `Context API`의 `Provider`로 `<App/>`을 감싸지 않습니다. 컴포넌트와 싱글톤에 가까운 스토어가 맞바로 결합합니다. 컴포넌트가 store에 강하게 종속됩니다. 
-이것은 컴포넌트의 유닛테스트가 힘들고 컴포넌트 재사용을 어렵게 할 수 있습니다.
+use-simple-store는 `Context API`의 `Provider`로 `<App/>`을 감싸지 않습니다. 컴포넌트와 싱글톤에 가까운 스토어가 맞바로 결합합니다. 컴포넌트의 유닛테스트를 힘들고 컴포넌트 재사용을 어렵게 할 수 있습니다.
 
-### 사용자 액션과 스토어 변경이 강하게 결합합니다.
+### 사용자 액션과 스토어 변경함수가 서로 강하게 결합합니다.
 사용자의 액션과 각 스토어(또는 리듀서)의 변경은 1:1 관계가 아닐 수 있습니다. 포스트(post)에 코멘트를 작성하는 임의의 사용자 액션(`WRITE_COMMENT`)을 생각해 봅시다. 이 액션이 실행되면 포스트(post) 스토어는 `포스트에 달린 총 댓글 수`를 +1 합니다. 동시에 화면에는 내가 단 댓글 수를 표시하는 곳도 존재합니다. 내 정보(myProfile) 스토어의 `내가 단 댓글 수`도 +1 해야 합니다. `포스트 스토어의 포스트에 달린 총 댓글 수` 와 `내 정보 스토어의 내가 단 댓글 수`는 의미도 다르고 다른 스토어에 위치하지만 같은 액션(`WRITE_COMMENT`)에 반응해야 합니다.
 
 ```js
@@ -225,7 +224,8 @@ function writeComment(){
     addMyProfileCommentCount()
 }
 ```
-강한 결합은 코드 유연성을 떨어뜨립니다. 스토어의 로직이 변경됐을 때, 코드수정이 스토어 뿐 아니라 여러 군데서 이뤄져야 할 수도 있습니다. 그러나 대개는 특수하고 빈번하지 않습니다. 
+
+스토어의 로직이 변경됐을 때, 코드수정이 스토어 뿐 아니라 여러 군데서 이뤄져야 할 수도 있습니다. 그러나 대개는 특수하고 빈번하지 않습니다. 
 
 ## 마치며
 저는 만족하며 사용하고 있답니다. 😎 
