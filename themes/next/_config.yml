@@ -605,8 +605,8 @@ calendar:
 disqus:
   enable: true
   shortname: cross-code
-  count: true
-  lazyload: false
+  count: false
+  lazyload: true
 
 # DisqusJS
 # Alternative Disqus - Render comment component using Disqus API
