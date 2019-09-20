@@ -82,7 +82,20 @@ const App = () => (
 ```
 
 ### 코드 Build 결과 
- 
+``` javascript
+react-app
+ dist/
+  - index.html
+  - main.b1234.js (contains Appcomponent and bootstrap code)
+  - home.bc4567.js (contains Home)
+  - about.bc4567.js (contains About)
+  
+/** index.html **/
+<head>
+  <div id="root"></div>
+  <script src="main.b1234.js"></script>
+</head>
+```
 
  
 ###
