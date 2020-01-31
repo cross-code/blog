@@ -149,7 +149,7 @@ $card_base: 12px;
 ## 기본 레이아웃 구현하기
 간단한 예제를 통해 지금까지 내용을 정리합시다.
 
-![web](./pixless_css_layout/eg_web_1.png)
+![web](./eg_web_1.png)
 이 웹사이트는 크게 `menu`, `nav`, `content` 컴포넌트로 구성되어 있습니다. 첫번째 할 일은 전체 웹사이트의 기본 글자크기를 지정하는 것입니다. 
 
 ```css
@@ -176,7 +176,7 @@ html {
 
 이제 웹페이지를 스타일링을 시작합시다. `content` 컴포넌트는 아래 이미지와 같은 스타일을 가집니다.
 
-![web](./pixless_css_layout/eg_content.png)
+![web](./eg_content.png)
 
 `content`는 8px 패딩이 존재하고 3개의 `item` 사이의 위아래 간격은 12px입니다. item은 6px의 패딩이 있고 글자크기는 14px입니다. scss로 이것을 스타일링하면 다음과 같습니다.
 
@@ -200,7 +200,7 @@ html {
 
 컴포넌트 최상위에 `1rem`을 주었습니다. 그래서 각 컴포넌트는 아래 그림처럼 루트 글자크기에 의해 제어됩니다.
 
-![web](./pixless_css_layout/eg_web_2.png)
+![web](./eg_web_2.png)
 
 
 루트(html)의 글자크기를 화면너비에 따라 바꾸면 전체 요소의 크기비 역시 일괄적으로 변경되는 것을 확인 할 수 있습니다. 이 때 [include-media](https://include-media.com/)란 scss 미디어쿼리 라이브러리를 사용하면  좀 더 심플한 반응형 코드를 작성 할 수 있습니다.
@@ -217,7 +217,7 @@ html {
 
 컴포넌트 및 컴포넌트 구성요소의 스타일링은 모두 `em`을 사용했는데요, 결국 컴포넌트의 구성요소는 컴포넌트 최상위 글자크기를 바라보게 됩니다.
 
-![web](./pixless_css_layout/eg_web_3.png)
+![web](./eg_web_3.png)
 
 컴포넌트 최상위(블럭요소) 글자크기를 변경해서 컴포넌트 단위의 예외가 가능합니다.
 
