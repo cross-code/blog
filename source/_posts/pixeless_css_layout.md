@@ -532,6 +532,4 @@ scss를 사용하고 있다면 제가 만든 [thejungle](https://github.com/skt-
 ## 작성자
 <img src="https://avatars2.githubusercontent.com/u/16894698?v=4" width="110" align="left" style="margin-right: 10px"> 
 
-**BYUNGI**
-<br>https://github.com/skt-t1-byungi
-<br>`write less, do more`
+**BYUNGI**<br>https://github.com/skt-t1-byungi<br>`write less, do more`
