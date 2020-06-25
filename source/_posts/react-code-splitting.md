@@ -127,8 +127,8 @@ function MyComponent() {
 }
 
 // PageA.js 에선 Button 컴포넌트를 사용하려고 import하고 있습니다.
-import { Button } from './components';  // X 사용하지 않는 다른 컴포넌트도 함께 로드됩니다.
-import Button from './components/Button // O 개별 컴포넌트로 로드해야 불필요한 컴포넌트가 로드되어 파일 사이즈가 커지는것을 방지할 수 있습니다.
+import { Button } from "./components"; // X 사용하지 않는 다른 컴포넌트도 함께 로드됩니다.
+import Button from "./components/Button"; // O 개별 컴포넌트로 로드해야 불필요한 컴포넌트가 로드되어 파일 사이즈가 커지는것을 방지할 수 있습니다.
 
 function PageA() {
   return (
@@ -140,9 +140,9 @@ function PageA() {
 }
 
 // components/index.js
-export { default as Loader } from './common/Loader';
-export { default as Button } from './common/OtherSetting';
-export { default as InsideSearch } from './common/InsideSearch';
+export { default as Loader } from "./common/Loader";
+export { default as Button } from "./common/OtherSetting";
+export { default as InsideSearch } from "./common/InsideSearch";
 ```
 
 ## 방법 #2. Loadable Components
