@@ -13,20 +13,22 @@
 여러 사람이 함께 사용하는 블로그이니 문서 하단에 꼭 작성자를 남겨주세요.
 
 ## Hexo CLI 설치
-``` bash
+
+```bash
 $ npm install -g hexo-cli
 ```
 
 ## 블로그 서버 실행
 
-``` bash
+```bash
 $ npm run start
 ```
+
 More info: [Server](https://hexo.io/docs/server.html)
 
 ## 새로운 포스트 생성
 
-``` bash
+```bash
 // 일반적인 포스트 작성
 $ hexo new "My New Post"
 
@@ -36,15 +38,31 @@ $ hexo new draft "My New Post"
 // draft 포스트 배포에 포함시키기
 $ hexo publish post "Post Name"
 ```
+
 More info: [Writing](https://hexo.io/docs/writing.html)
 
 ## 빌드와 배포를 한번에 (cross-code.github.io에 배포됩니다)
 
-``` bash
+```bash
 $ npm run deploy
 ```
 
+## 커밋 코멘트 작성룰
+
+- chore: Other changes that don't modify src or test files
+- fix: A bug fix
+- feat: A new feature
+- docs: Documentation changes
+- test: Adding missing tests or correcting existing tests
+- build: Changes that affect the build system
+- ci: Changes to our CI configuration files and scripts
+- perf: A code change that improves performance
+- refactor: A code change that neither fixes a bug nor adds a feature
+- style: Changes that do not affect the meaning of the code (linting)
+- vendor: Bumping a dependency like libchromiumcontent or node
+
 ## 참고
+
 - [Markdown 작성법](https://gist.github.com/ihoneymon/652be052a0727ad59601)
 - [Hexo 공식 문서](https://hexo.io/ko/docs)
 - [Hexo 기본 사용법](https://futurecreator.github.io/2016/06/21/hexo-basic-usage/)
