@@ -90,7 +90,9 @@ const App = () => (
 ```
 
 ### 코드 Build 결과
+
 dist 디렉토리를 보면 라우팅 단위로 파일이 분리되어 생성된것을 확인 할 수 있습니다.
+
 ```javascript
 react-app
  dist/
@@ -106,6 +108,43 @@ react-app
 </head>
 ```
 
+### 흔히 발생할 수 있는 실수
+
+import 하는 페이지 내부에 사용중인 컴포넌트가 사용하지 않는 다른 컴포넌트와 index.js에 export를 편의상 묶어 사용하는 경우가 있습니다. 이때 컴포넌트 import시 객체 디스트럭쳐링을 사용할 경우 내부적으로 사용하지 않는 컴포넌트도 함께 로드되기 때문에 코드 분할 시 큰 효과를 보지 못합니다. 그렇기 때문에 실사용 컴포넌트만 개별 임포트 하는것이 중요합니다.
+
+```javascript
+// 예로, PageA를 코드 분할하려고 합니다.
+const PageA = React.lazy(() => import("./PageA"));
+
+function MyComponent() {
+  return (
+    <div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <PageA />
+      </Suspense>
+    </div>
+  );
+}
+
+// PageA.js 에선 Button 컴포넌트를 사용하려고 import하고 있습니다.
+import { Button } from './components';  // X 사용하지 않는 다른 컴포넌트도 함께 로드됩니다.
+import Button from './components/Button // O 개별 컴포넌트로 로드해야 불필요한 컴포넌트가 로드되어 파일 사이즈가 커지는것을 방지할 수 있습니다.
+
+function PageA() {
+  return (
+    <div>
+      <h1>PageA</h1>
+      <Button>OK</Button>
+    </div>
+  );
+}
+
+// components/index.js
+export { default as Loader } from './common/Loader';
+export { default as Button } from './common/OtherSetting';
+export { default as InsideSearch } from './common/InsideSearch';
+```
+
 ## 방법 #2. Loadable Components
 
 React.lazy와 Suspense는 서버 사이드 렌더링을 지원하지 않습니다. 코드 분할을 클라이언트, 서버사이드 모두 가능하도록 만들고 싶다면 Loadable Components를 사용하면됩니다. (React 공식 문서에서 권장하는 방법)
@@ -114,8 +153,8 @@ React.lazy와 Suspense는 서버 사이드 렌더링을 지원하지 않습니�
 
 | Library             | Suspense | SSR | Library splitting | import(`./${value}`) |
 | ------------------- | -------- | --- | ----------------- | -------------------- |
-| React.lazy          | ✅        | ❌   | ❌                 | ❌                    |
-| @loadable/component | ✅        | ✅   | ✅                 | ✅                    |
+| React.lazy          | ✅       | ❌  | ❌                | ❌                   |
+| @loadable/component | ✅       | ✅  | ✅                | ✅                   |
 
 ### Install
 
@@ -170,7 +209,7 @@ function MyComponent() {
 ```javascript
 import loadable from "@loadable/component";
 
-const AsyncPage = loadable(props => import(`./${props.page}`));
+const AsyncPage = loadable((props) => import(`./${props.page}`));
 
 function MyComponent() {
   return (
