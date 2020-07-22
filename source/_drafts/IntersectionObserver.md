@@ -33,11 +33,11 @@ const observer = new IntersectionObserver(callback, options);
 ### 속성
 
 필수값이 아닌 Optional이며, 옵저버를 조정할 수 있는 옵션 객체로 위 구문의 options에 기입합니다.
-지금은 이런게 있다 정도만 보고, 자세히 다뤄보고자 할 때 다시 봐도 늦지 않는다.
+지금은 이런 내용이 있다 정도만 알아두고, 자세히 다뤄보고자 할 때 다시 봐도 늦지 않는다.
 
 - root
   - 대상 요소 (element) 를 감시할 상위 요소.
-  - default: null (document가 뷰포트로 사용된다)
+  - default: null (document가 root로 사용된다)
 - rootMargin
   - 바깥 여백(Margin)을 이용해 Root 범위를 확장하거나 축소할 수 있습니다.
   - default: 0px 0px 0px 0px
@@ -46,6 +46,11 @@ const observer = new IntersectionObserver(callback, options);
   - default: 0.0
 
 ### 메서드
+
+- observe(targetElement): 타겟 엘리먼트에 대한 관찰을 시작할 때 사용합니다.
+- unobserve(targetElement): 타겟 엘리먼트에 대한 관찰을 멈출 때 사용합니다.
+- disconnect(): 다수의 엘리먼트를 관찰하고 있을 때, 이에 대한 모든 관찰을 멈추고 싶을 때 사용하면 됩니다.
+- takeRecords(): 관찰중인 엘리먼트의 IntersectionObserverEntry 객체를 배열로 반환한다.
 
 ## 간단한 예제로 동작 원리 알아보기
 
