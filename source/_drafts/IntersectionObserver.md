@@ -56,7 +56,9 @@ observe, unobserve, disconnect 메서드를 주로 사용하게 된다.
 
 ## 간단한 예제로 동작 원리 알아보기
 
-화면에 보이는 블럭은 배경색이 차오르고, 블럭이 화면 밖으로 나가면 다시 배경색이 사라지는 예제입니다.
+화면에 보이는 블럭은 노란 배경색이 차오르고, 블럭이 화면 밖으로 나가면 다시 배경색이 사라지는 예제입니다.
+
+![Browser compatibility](./preview.gif)
 
 ```javascript
 const io = new IntersectionObserver(entries => {
@@ -86,7 +88,7 @@ $items.forEach(item => {
 // io.disconnect();
 ```
 
-한번 해보면 생각보다 간단한 인터페이스라 금방 실무에 다양하게 활용하실 수 있습니다.
+사용해보면 생각보다 간단한 인터페이스라 금방 실무에 다양하게 활용하실 수 있습니다.
 아래 참고할만한 NPM 모듈이 있으니 복잡하지 않은 UI는 직접 구현해 보는 것을 추천합니다 :)
 
 ## 브라우저 지원 현황
