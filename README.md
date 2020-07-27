@@ -67,3 +67,12 @@ $ npm run deploy
 - [Hexo 공식 문서](https://hexo.io/ko/docs)
 - [Hexo 기본 사용법](https://futurecreator.github.io/2016/06/21/hexo-basic-usage/)
 - [이모지](https://getemoji.com)
+
+
+## 괜찮은 테마 찾기
+
+- https://github.com/next-theme/hexo-theme-next (사용중)
+- https://blog.zhangruipeng.me/hexo-theme-hueman
+- https://blog.zhangruipeng.me/hexo-theme-icarus
+
+
