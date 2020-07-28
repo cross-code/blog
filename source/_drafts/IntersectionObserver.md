@@ -56,7 +56,7 @@ observe, unobserve, disconnect 메서드를 주로 사용하게 된다.
 
 ## 간단한 예제로 동작 원리 알아보기
 
-화면에 보이는 블럭은 노란 배경색이 차오르고, 블럭이 화면 밖으로 나가면 다시 배경색이 사라지는 예제입니다. [(Preview)](https://tikcp.csb.app/)
+화면에 보이는 블럭은 노란 배경색이 차오르고, 블럭이 화면 밖으로 나가면 다시 배경색이 사라지는 예제입니다. [(DEMO)](https://tikcp.csb.app/)
 
 ![Browser compatibility](./preview.gif)
 
