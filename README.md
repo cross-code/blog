@@ -69,7 +69,7 @@ $ npm run deploy
 - [이모지](https://getemoji.com)
 
 
-## 괜찮은 테마 찾기
+## 괜찮은 블로그 테마 찾기
 
 - https://github.com/next-theme/hexo-theme-next (사용중)
 - https://blog.zhangruipeng.me/hexo-theme-hueman
