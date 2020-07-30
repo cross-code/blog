@@ -47,6 +47,14 @@ More info: [Writing](https://hexo.io/docs/writing.html)
 $ npm run deploy
 ```
 
+## clean
+
+최신 소스 배포가 안될때, 캐시 파일 (db.json) 및 생성된 파일들 (public) 을 삭제 후 재시도 합니다.
+
+```bash
+$ npm run clean
+```
+
 ## 커밋 코멘트 작성룰
 
 - chore: Other changes that don't modify src or test files
@@ -68,11 +76,8 @@ $ npm run deploy
 - [Hexo 기본 사용법](https://futurecreator.github.io/2016/06/21/hexo-basic-usage/)
 - [이모지](https://getemoji.com)
 
-
 ## 괜찮은 블로그 테마 찾기
 
 - https://github.com/next-theme/hexo-theme-next (사용중)
 - https://blog.zhangruipeng.me/hexo-theme-hueman
 - https://blog.zhangruipeng.me/hexo-theme-icarus
-
-
