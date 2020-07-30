@@ -7,9 +7,6 @@ tags:
 date: 2020-07-16 23:11:31
 ---
 
-## 서브 제목
-내용
-
 ## IntersectionObserver API란
 
 <strong>IntersectionObserver API는 타겟 엘리멘트가 화면(viewport)에 보여지고 있는지 관찰하는 API입니다.</strong>
@@ -64,8 +61,8 @@ observe, unobserve, disconnect 메서드를 주로 사용하게 된다.
 ![Browser compatibility](./preview.gif)
 
 ```javascript
-const io = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
     // entry의 target으로 DOM에 접근합니다.
     const $target = entry.target;
 
@@ -80,7 +77,7 @@ const io = new IntersectionObserver(entries => {
 
 // 옵저버할 대상 DOM을 선택하여 관찰을 시작합니다.
 const $items = document.querySelectorAll("li");
-$items.forEach(item => {
+$items.forEach((item) => {
   io.observe(item);
 });
 
